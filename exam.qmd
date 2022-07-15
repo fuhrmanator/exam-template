@@ -1,0 +1,57 @@
+---
+documentclass: exam
+papersize: letter
+include-in-header:
+  text: |
+    \renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+    \pointsinrightmargin
+    \qformat{\textbf{Question \thequestion}\quad (\totalpoints\ \points)\hfill}
+classoption: twoside,american,french,addpoints,most,usenames,dvipsnames,answers
+
+format:
+
+  pdf:
+    # has to be latexmk for graphviz figures
+    pdf-engine: latexmk
+
+filters:
+  - filters/exam-filter.lua
+  - filters/diagram-generator.lua
+  - quarto
+
+---
+
+# Hello world
+
+::: questions
+
+_q Faites une RDCU pour l'opération système `débuterAjouterCours(...)` définie dans l'annexe.
+Ne considérez que le scénario de succès. La réponse doit être un diagramme de séquence en UML avec les annotations
+GRASP justifiant en détail les choix de conception.
+
+```{.plantuml}
+skinparam style strictuml
+title Class diagram
+class A {
+  i:int
+  m(): void
+}
+```
+
+::: parts
+
+_p{0.5} La RDCU doit être cohérente avec les **artefacts**.
+ 
+_p{0.5} La RDCU doit être complète.
+
+_p{2} La RDCU doit documenter et justifier les bons choix de conception.
+
+:::
+
+\clearpage
+
+(Papier brouillon pour la question précédente. Rien ici ne sera évalué.)
+
+\clearpage
+
+:::
