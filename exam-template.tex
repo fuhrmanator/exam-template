@@ -1,4 +1,8 @@
-\documentclass[12pt, a4paper $if(answers)$, answers $endif$]{exam}
+\documentclass[12pt, addpoints, a4paper $if(answers)$, answers $endif$]{exam}
+
+\renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+\pointsinrightmargin
+\qformat{\textbf{Question \thequestion}\quad (\totalpoints\ \points)\hfill}
 
 \usepackage{polyglossia}
 \setmainlanguage{english}
@@ -11,7 +15,7 @@
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{TeX Gyre Pagella}
 \setsansfont{Linux Biolinum O}[Scale=MatchLowercase]
-\setmonofont{Cascadia Mono}[Scale=MatchLowercase]
+% \setmonofont{Cascadia Mono}[Scale=MatchLowercase]
 \setmathfont{TeX Gyre Pagella Math}[Scale=MatchLowercase]
 
 \usepackage[svgnames]{xcolor}
@@ -46,8 +50,8 @@ $endif$
 \footer{}{Page \thepage{} of \numpages{}}{\iflastpage{\emph{End of the exam}}{\emph{Please turn the page}}}
 \runningheadrule{}
 
-\renewcommand{\thequestion}{\bfseries \sffamily Exercice \arabic{question}}
-\renewcommand{\thepartno}{\arabic{question}.\alph{partno}}
+% \renewcommand{\thequestion}{\bfseries \sffamily Exercice \arabic{question}}
+% \renewcommand{\thepartno}{\arabic{question}.\alph{partno}}
 
 \title{\sffamily $title$}
 \author{$course.long$}

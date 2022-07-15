@@ -5,24 +5,31 @@ course:
   long: Long course name
 date: Date / deadline
 answers: false # set to true to show answers
+# include-in-header:
+#   text: |
+#     \renewcommand{\solutiontitle}{\noindent\textbf{Solution:}\par\noindent}
+#     \pointsinrightmargin
+#     \qformat{\textbf{Question \thequestion}\quad (\totalpoints\ \points)\hfill}
+# classoption: twoside,american,french,addpoints,most,usenames,dvipsnames,answers
+
 ---
 
-@q This is the first question.
+_q{2} This is the first question.
 
 :::solution
 Solution to the first question.
 :::
 
-@q This is the second question.
+_q This is the second question.
 
 :::parts
-@p This question has parts!
+_p{1} This question has parts!
 
 ::: solution
 And parts can have solutions too.
 :::
 
-@p Multiple parts are possible.
+_p{2} Multiple parts are possible.
 
 ::: solution
 And each one gets a solution!
